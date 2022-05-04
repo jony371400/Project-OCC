@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Center Monitor System</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Qahiri&display=swap" rel="stylesheet">
 
-    <link href="/Client/Asset/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<script src="/Client/API/" ></script>
+<link href="/Client/Asset/style.css" rel="stylesheet">
+<link href="/Client/Asset/index/content-style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/Client/Template/main.js"></script>
 
 <body>
-    <!-- Header -->
-    <div class="Header">
-        ~ Operation Control Center ~
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="/Client/index.html">Home Page</a>
+            <a href="/Client/control.html">Control Center</a>
+            <a href="/Client/skyeyes.html">SKY Eyes</a>
+        </div>
     </div>
+
+    <span class="Span" onclick="openNav()">&#9776; Menu</span>
+
+    <!-- <span class="section"></span>
+    &nbsp;
+    </section> -->
+    </br>
+    </br>
+    </br>
+    </br>
+
 
     <!-- Container -->
     <div class="container">
         <div class="item1">
-            1
+
         </div>
         <div class="item2">
-            2
+            <canvas id="myChart" class="PolarChart" width="400px" height="400px"></canvas>
         </div>
         <div class="item3">
-            3
+
         </div>
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        footer
-    </div>
 </body>
+
+<script src="/Client/Chart/index/PolarChart.js"></script>
 
 </html>

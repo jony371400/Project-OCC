@@ -1,0 +1,66 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 250px;
+}
+
+.item1 {
+    margin: 5px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    /* background-color: skyblue; */
+}
+
+.item2 {
+    margin: 5px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    /* background-color: teal; */
+}
+
+.item3 {
+    margin: 5px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    /* background-color: blueviolet */
+}
+
+/* @media screen and (max-width:1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 300px 100px;
+    }
+
+    .item1 {
+        margin: 0px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        background-color: skyblue;
+    }
+
+    .item2 {
+        margin: 0px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background-color: teal;
+    }
+
+    .item3 {
+        margin: 0px;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        background-color: blueviolet
+    }
+} */
+
+/* .Content {
+    height: 1000px; 
+    background-color: aqua;
+} */
+
+/* .PolarChart{
+    width: 400px;
+    height: 400px;   
+} */
