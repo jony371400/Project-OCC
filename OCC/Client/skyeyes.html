@@ -7,41 +7,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Qahiri&display=swap" rel="stylesheet">
-
-    <link href="/Client/Asset/style.css" rel="stylesheet">
 </head>
 
+<link href="/Client/Asset/style.css" rel="stylesheet">
+<link href="/Client/Asset/skyeyes/content-style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/Client/Template/main.js"></script>
 
 <body>
-
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <a href="/Client/index.html">Home Page</a>
             <a href="/Client/control.html">Control Center</a>
-            <a href="/Client/skyeyes.html">SKY Eyes</a>
+            <a href="/Client/skyeyes.html">Sky Eyes</a>
         </div>
     </div>
 
     <span class="Span" onclick="openNav()">&#9776; Menu</span>
 
-    <div class="Content">
-
-    </div>
-
     <!-- Container -->
-    <!-- <div class="container">
+    <div class="container">
         <div class="item1">
-            1
+            <canvas id="BarChart" class="BarChart"></canvas>
         </div>
         <div class="item2">
-            2
+            <canvas id="LineChart" class="LineChart"></canvas>
         </div>
         <div class="item3">
-            3
+            <canvas id="BubbleChart" class="BubbleChart"></canvas>
         </div>
-    </div> -->
+        <div class="item4">
+            <canvas id="PolarChart" class="PolarChart"></canvas>
+        </div>
+        <div class="item5">
+            <canvas id="PieChart" class="PieChart"></canvas>
+        </div>
+        <div class="item6">
+            <canvas id="RadarChart" class="RadarChart"></canvas>
+        </div>
+    </div>
 </body>
+
+<script src="/Client/Chart/skyeyes/Chart.js"></script>
 
 </html>
