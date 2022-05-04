@@ -1,5 +1,7 @@
 
 .container {
+    /* height: 6000px; */
+
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 250px;
@@ -53,11 +55,6 @@
         grid-row: 3 / 4;
         background-color: blueviolet
     }
-} */
-
-/* .Content {
-    height: 1000px; 
-    background-color: aqua;
 } */
 
 /* .PolarChart{

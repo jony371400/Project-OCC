@@ -32,7 +32,7 @@ const config = {
     options: {
         plugins: {
             legend: {
-                text : 'YO',
+                // text : 'YO',
                 display: true,
                 labels: {
                     color: 'white',
@@ -49,6 +49,6 @@ const config = {
 };
 
 const myChart = new Chart(
-    document.getElementById('myChart'),
+    document.getElementById('PolarChart'),
     config
 );
