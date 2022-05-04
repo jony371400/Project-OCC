@@ -23,7 +23,6 @@ const data = {
         borderColor: 'black',
         borderWidth: 3,
         hoverBorderColor: 'white'
-        // color: 'yellow'
     }]
 };
 

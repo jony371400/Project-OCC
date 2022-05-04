@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Qahiri&display=swap" rel="stylesheet">
-
-    <link href="/Client/Asset/style.css" rel="stylesheet">
 </head>
 
+<link href="/Client/Asset/style.css" rel="stylesheet">
+<link href="/Client/Asset/control/content-style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/Client/Template/main.js"></script>
 
 <body>
@@ -26,14 +27,10 @@
 
     <span class="Span" onclick="openNav()">&#9776; Menu</span>
 
-    <div class="Content">
-
-    </div>
-
     <!-- Container -->
-    <!-- <div class="container">
+    <div class="container">
         <div class="item1">
-            1
+            <canvas id="myChart" width="400" height="400"></canvas>
         </div>
         <div class="item2">
             2
@@ -41,7 +38,9 @@
         <div class="item3">
             3
         </div>
-    </div> -->
+    </div>
 </body>
+
+<script src="/Client/Chart/control/LineCahrt.js"
 
 </html>
