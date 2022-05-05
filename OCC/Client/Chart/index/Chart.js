@@ -1,23 +1,21 @@
 const data = {
     labels: [
-        'LS50',
-        'LS100',
-        'LS250',
-        'TM50',
-        'TM100',
-        'TM250'
+        'Humidity',
+        'PH',
+        'Temperature',
+        'Health',
+        'PM2.5'
     ],
 
     datasets: [{
         label: 'My First Dataset',
-        data: [90, 18, 70, 30, 21,67],
+        data: [20, 7, 37, 10, 20],
         backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(75, 192, 192)',
             'rgb(255, 205, 86)',
             'rgb(201, 203, 207)',
-            'rgb(54, 162, 235)',
-            'rgb(126, 54, 135)'
+            'rgb(54, 162, 235)'
         ],
 
         borderColor: 'black',
@@ -41,7 +39,7 @@ const config = {
             },
             title: {
                 display: true,
-                text: 'AMR Battery',
+                text: 'Env Detect',
                 color:'white'
             }
         }

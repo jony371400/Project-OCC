@@ -1,44 +1,37 @@
 const labels_Bar = [
-    'LS50',
-    'LS100',
-    'LS250',
-    'TM50',
-    'TM100',
-    'TM250'
+    'X Axis',
+    'Z Axis',
+    'L1',
+    'L2',
+    'R1',
+    'R2'
 ];
 
 const data_Bar = {
     labels: labels_Bar,
     datasets: [{
-        label: 'My First Dataset',
-        data: [65, 59, 80, 81, 56, 55, 40],
+        label: 'Bar Legend',
+        data: [65, 59, 80, 81, 56, 55],
         backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
+            'rgba(255, 255, 255, 0.1)',
+            'rgba(255, 255, 255, 0.2)',
+            'rgba(255, 255, 255, 0.4)',
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.8)',
+            'rgba(255, 255, 255, 1.0)'
         ],
         borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
+
+            'rgba(0, 0, 0, 0.1)',
+            'rgba(0, 0, 0, 0.2)',
+            'rgba(0, 0, 0, 0.4)',
+            'rgba(0, 0, 0, 0.6)',
+            'rgba(0, 0, 0, 0.8)',
+            'rgba(0, 0, 0, 1.0)'
         ],
-        borderWidth: 1
+        borderWidth: 2,
+
     }]
-    // datasets: [{
-    //     barPercentage: 0.5,
-    //     barThickness: 6,
-    //     maxBarThickness: 8,
-    //     minBarLength: 2,
-    //     data: [10, 20, 30, 40, 50, 60, 70]
-    // }]
 }
 
 const config_Bar = {
@@ -46,14 +39,16 @@ const config_Bar = {
     data: data_Bar,
     options: {
         scales: {
-            xAxis: {
-                // beginAtZero: true,
-                color:'white'
+            y: {
+               ticks:{
+                   color:'white',
+               }
             },
-            yAxis: {
-                // beginAtZero: true,
-                color:'white'
-            }
+            x: {
+                ticks:{
+                    color:'white',
+                }
+             },
         },
         plugins: {
             legend: {
@@ -65,29 +60,29 @@ const config_Bar = {
             },
             title: {
                 display: true,
-                text: 'JoyStick Status',
+                text: 'Control Status',
                 color: 'white'
-            }
+            },
         }
     }
 }
 
 const labels_line = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    '0000',
+    '0400',
+    '0800',
+    '1200',
+    '1600',
+    '2400'
 ];
 
 const data_line = {
     labels: labels_line,
     datasets: [{
-        label: 'My First dataset',
+        label: 'Line Legend',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: [100, 85, 70, 60, 20, 10],
     }]
 };
 
@@ -102,6 +97,32 @@ const config_line = {
             // Substitute the appropriate scale IDs
             const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
             const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
+        },
+        scales: {
+            y: {
+               ticks:{
+                   color:'white',
+               }
+            },
+            x: {
+                ticks:{
+                    color:'white',
+                }
+             },
+        },
+        plugins: {
+            legend: {
+                display: false,
+                labels: {
+                    color: 'white',
+                    font: 300
+                }
+            },
+            title: {
+                display: true,
+                text: 'Battery',
+                color: 'white'
+            },
         }
     }
 };
