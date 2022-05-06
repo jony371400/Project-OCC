@@ -17,7 +17,9 @@
     margin: 5px;
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    /* background-color: teal; */
+
+    position: relative;
+    /* background-color: aqua; */
 }
 
 .item3 {
@@ -56,7 +58,7 @@
     }
 } */
 
-/* .PolarChart{
-    width: 400px;
-    height: 400px;   
-} */
+.PolarChart{
+    position: relative;
+    /* background-color: azure; */
+}
