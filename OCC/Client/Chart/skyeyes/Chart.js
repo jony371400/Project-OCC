@@ -48,13 +48,15 @@ const config_Bar = {
         scales: {
             xAxis: {
                 // beginAtZero: true,
-                color:'white'
+                color: 'white'
             },
             yAxis: {
                 // beginAtZero: true,
-                color:'white'
+                color: 'white'
             }
         },
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
@@ -66,9 +68,24 @@ const config_Bar = {
             title: {
                 display: true,
                 text: 'JoyStick Status',
-                color: 'white'
+                color: 'white',
+                font: {
+                    size: 30
+                }
             }
-        }
+        },
+        scales: {
+            y: {
+               ticks:{
+                   color:'white',
+               }
+            },
+            x: {
+                ticks:{
+                    color:'white',
+                }
+             },
+        },
     }
 }
 
@@ -102,7 +119,41 @@ const config_line = {
             // Substitute the appropriate scale IDs
             const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
             const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                text : 'YO',
+                display: false,
+                labels: {
+                    color: 'white',
+                    font: {
+                        size: 24
+                    }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Env Detect',
+                color: 'white',
+                font: {
+                    size: 30
+                }
+            }
+        },
+        scales: {
+            y: {
+               ticks:{
+                   color:'white',
+               }
+            },
+            x: {
+                ticks:{
+                    color:'white',
+                }
+             },
+        },
     }
 };
 
@@ -117,11 +168,11 @@ const data_Bubble = {
             x: 30,
             y: 20,
             r: 15
-        },{
+        }, {
             x: 32,
             y: 25,
             r: 35
-        },{
+        }, {
             x: 40,
             y: 10,
             r: 10
@@ -133,10 +184,45 @@ const data_Bubble = {
 const config_Bubble = {
     type: 'bubble',
     data: data_Bubble,
-    options: {}
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false,
+                text : 'YO',
+                labels: {
+                    color: 'white',
+                    font: {
+                        size: 24
+                    }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Sensor Detect',
+                color: 'white',
+                font: {
+                    size: 30
+                }
+            }
+        },
+        scales: {
+            y: {
+               ticks:{
+                   color:'white',
+               }
+            },
+            x: {
+                ticks:{
+                    color:'white',
+                }
+             },
+        },
+    }
 };
 
-const data_Polar= {
+const data_Polar = {
     labels: [
         'Red',
         'Green',
@@ -160,7 +246,42 @@ const data_Polar= {
 const config_Polar = {
     type: 'polarArea',
     data: data_Polar,
-    options: {}
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        // scales: {
+        //     y: {
+        //        ticks:{
+        //            color:'white',
+        //        }
+        //     },
+        //     x: {
+        //         ticks:{
+        //             color:'white',
+        //         }
+        //      },
+        // },
+        plugins: {
+            legend: {
+                display: true,
+                text : 'YO',
+                labels: {
+                    color: 'white',
+                    font: {
+                        size: 12
+                    }
+                }
+            },
+            title: {
+                display: false,
+                text: 'Env Detect',
+                color: 'white',
+                font: {
+                    size: 24
+                }
+            }
+        },
+    }
 };
 
 const data_Pie = {
@@ -183,7 +304,31 @@ const data_Pie = {
 
 const config_Pie = {
     type: 'doughnut',
-    data: data_Pie
+    data: data_Pie,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                text : 'YO',
+                display: true,
+                labels: {
+                    color: 'white',
+                    font: {
+                        size: 24
+                    }
+                }
+            },
+            title: {
+                display: false,
+                text: 'Env Detect',
+                color: 'white',
+                font: {
+                    size: 30
+                }
+            }
+        },
+    }
 };
 
 const data_Radar = {
@@ -197,7 +342,7 @@ const data_Radar = {
         'Running'
     ],
     datasets: [{
-        label: 'My First Dataset',
+        label: 'Dataset-1',
         data: [65, 59, 90, 81, 56, 55, 40],
         fill: true,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -207,7 +352,7 @@ const data_Radar = {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgb(255, 99, 132)'
     }, {
-        label: 'My Second Dataset',
+        label: 'Dataset-2',
         data: [28, 48, 40, 19, 96, 27, 100],
         fill: true,
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
@@ -227,7 +372,29 @@ const config_Radar = {
             line: {
                 borderWidth: 3
             }
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                text : 'YO',
+                display: true,
+                labels: {
+                    color: 'white',
+                    font: {
+                        size: 24
+                    }
+                }
+            },
+            title: {
+                display: false,
+                text: 'Env Detect',
+                color: 'white',
+                font: {
+                    size: 30
+                }
+            }
+        },
     },
 };
 

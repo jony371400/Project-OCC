@@ -6,7 +6,6 @@ const data = {
         'Health',
         'PM2.5'
     ],
-
     datasets: [{
         label: 'My First Dataset',
         data: [20, 7, 37, 10, 12],
@@ -28,19 +27,26 @@ const config = {
     type: 'polarArea',
     data: data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 // text : 'YO',
                 display: true,
                 labels: {
                     color: 'white',
-                    font:300
+                    font: {
+                        size: 24
+                    }
                 }
             },
             title: {
                 display: true,
                 text: 'Env Detect',
-                color:'white'
+                color: 'white',
+                font: {
+                    size: 30
+                }
             }
         }
     }

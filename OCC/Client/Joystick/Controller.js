@@ -64,59 +64,51 @@ var Service_Clear = new ROSLIB.Service({
 //#endregion
 
 //#region Function
-// function HandShake()//在点击”Publish”按钮后发布消息，并对消息进行更改
-// {
-//     // console.log(joy1X.value)
-//     // console.log(typeof(joy1X.value)
-//     // console.log(joy1Y.value)
-//     // console.log(typeof(joy1Y.value))
+function HandShake()//在点击”Publish”按钮后发布消息，并对消息进行更改
+{
+    twist.linear.x = parseInt(Y_Data) / 100
+    twist.linear.y = 0.0
+    twist.linear.z = 0.0
+    twist.angular.x = 0.0
+    twist.angular.y = 0.0
+    twist.angular.z = (parseInt(X_Data) / 100) * -1
+    cmdVel.publish(twist)   //发布twist消息
+    console.log('Publish Success !')
+}
 
-//     // twist.linear.x = parseInt(joy1Y.value) / 100
-//     // twist.linear.y = 0.0
-//     // twist.linear.z = 0.0
-//     // twist.angular.x = 0.0
-//     // twist.angular.y = 0.0
-//     // twist.angular.z = (parseInt(joy1X.value) / 100) * -1
-//     // cmdVel.publish(twist)   //发布twist消息
-//     // console.log('Publish Success !')
-// }
+function Subscribe()//在点击”Subscribe”按钮后订阅'/chatter'的消息，并将其显示到网页中
+{
+    listener.subscribe(function (message) {
+        document.getElementById("output").innerHTML = ('Received message on ' + listener.name + ': ' + message.data);
+    });
+}
 
-// function Subscribe()//在点击”Subscribe”按钮后订阅'/chatter'的消息，并将其显示到网页中
-// {
-//     listener.subscribe(function (message) {
-//         document.getElementById("output").innerHTML = ('Received message on ' + listener.name + ': ' + message.data);
-//     });
-// }
+function Unsubscribe()//在点击”Unsubscribe”按钮后取消订阅'/chatter'的消息
+{
+    listener.unsubscribe();
+}
 
-// function Unsubscribe()//在点击”Unsubscribe”按钮后取消订阅'/chatter'的消息
-// {
-//     listener.unsubscribe();
-// }
-
-// function Call_ClearService() {
-//     Service_Clear.callService(request, function (result) {
-//         console.log('Clear Success!')
-//     });
-// }
+function Call_ClearService() {
+    Service_Clear.callService(request, function (result) {
+        console.log('Clear Success!')
+    });
+}
 //#endregion
 
 //#region JOY1
-// var joy1IinputPosX = document.getElementById("joy1PosizioneX");
-// var joy1InputPosY = document.getElementById("joy1PosizioneY");
-// var joy1Direzione = document.getElementById("joy1Direzione");
-// var joy1X = document.getElementById("joy1X");
-// var joy1Y = document.getElementById("joy1Y");
+let X_Data
+let Y_Data
 
 var Joy1 = new JoyStick('joy1Div', {}, function (stickData) {
     // joy1IinputPosX.value = stickData.xPosition;
     // joy1InputPosY.value = stickData.yPosition;
     // joy1Direzione.value = stickData.cardinalDirection;
-    // joy1X.value = stickData.x;
-    // joy1Y.value = stickData.y;
+    X_Data = stickData.x;
+    Y_Data = stickData.y;
 
-    console.log('Stick X : ' , stickData.x)
-    console.log('Stick Y : ' , stickData.y)
+    console.log('Stick X : ', stickData.x)
+    console.log('Stick Y : ', stickData.y)
 
-    // HandShake()
+    HandShake()
 });
 //#endregion

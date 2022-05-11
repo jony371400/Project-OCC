@@ -38,6 +38,8 @@ const config_Bar = {
     type: 'bar',
     data: data_Bar,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                ticks:{
@@ -61,7 +63,10 @@ const config_Bar = {
             title: {
                 display: true,
                 text: 'Control Status',
-                color: 'white'
+                color: 'white',
+                font: {
+                    size: 30
+                }
             },
         }
     }
@@ -98,6 +103,8 @@ const config_line = {
             const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
             const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
         },
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                ticks:{
@@ -121,7 +128,10 @@ const config_line = {
             title: {
                 display: true,
                 text: 'Battery',
-                color: 'white'
+                color: 'white',
+                font: {
+                    size: 30
+                }
             },
         }
     }
